@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/ElectricCard.iml" filepath="$PROJECT_DIR$/ElectricCard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/littleQ/littleQ.iml" filepath="$PROJECT_DIR$/littleQ/littleQ.iml" />
+      <module fileurl="file://$PROJECT_DIR$/sokodudeblocking/sokodudeblocking.iml" filepath="$PROJECT_DIR$/sokodudeblocking/sokodudeblocking.iml" />
+    </modules>
+  </component>
+</project>

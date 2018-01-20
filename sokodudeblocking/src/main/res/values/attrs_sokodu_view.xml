@@ -1,0 +1,5 @@
+<resources>
+    <declare-styleable name="SokoduView">
+        <attr name="child_radius" format="dimension"/>
+    </declare-styleable>
+</resources>

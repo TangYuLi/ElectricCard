@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y120">
+
+    <EditText
+        android:id="@+id/et_tel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:hint="@string/tel"
+        android:inputType="number"
+        android:maxLength="11"
+        android:padding="@dimen/x5"
+        android:textSize="@dimen/x20" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x15"
+        android:id="@+id/tv_format_tel"
+        android:textSize="@dimen/x10"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_below="@id/et_tel"
+        android:paddingLeft="@dimen/x5"
+        />
+
+    <LinearLayout
+        android:id="@+id/linear_ib_del"
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/y30"
+        android:layout_alignRight="@id/et_tel"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/ib_del"
+            android:layout_width="@dimen/x20"
+            android:layout_height="@dimen/x20"
+            android:background="@mipmap/del" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/y30"
+        android:layout_marginRight="@dimen/x5"
+        android:layout_toLeftOf="@id/linear_ib_del"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/ib_unfold"
+            android:layout_width="@dimen/x15"
+            android:layout_height="@dimen/x15"
+            android:background="@mipmap/unfold" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y30"
+        android:layout_below="@+id/tv_format_tel"
+        android:hint="@string/password"
+        android:maxLength="12"
+        android:inputType="textPassword"
+        android:padding="@dimen/x5"
+        android:textSize="@dimen/x20" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/x15"
+        android:id="@+id/tv_format_password"
+        android:textSize="@dimen/x10"
+        android:gravity="center_vertical"
+        android:textColor="@android:color/holo_red_dark"
+        android:layout_below="@id/et_password"
+        android:paddingLeft="@dimen/x5"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="@dimen/x40"
+        android:layout_height="@dimen/y30"
+        android:layout_alignRight="@id/et_password"
+        android:layout_below="@id/tv_format_tel"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/ib_see_password"
+            android:layout_width="@dimen/x25"
+            android:layout_height="@dimen/x15"
+            android:background="@mipmap/close_eye" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_format_password"
+        android:layout_marginTop="@dimen/x10"
+        android:background="@color/blue"
+        android:text="@string/btn_login"
+        android:textSize="@dimen/x25" />
+
+</RelativeLayout>
