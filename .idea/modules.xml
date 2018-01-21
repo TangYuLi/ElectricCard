@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/ElectricCard.iml" filepath="$PROJECT_DIR$/ElectricCard.iml" />
       <module fileurl="file://$PROJECT_DIR$/littleQ/littleQ.iml" filepath="$PROJECT_DIR$/littleQ/littleQ.iml" />
       <module fileurl="file://$PROJECT_DIR$/sokodudeblocking/sokodudeblocking.iml" filepath="$PROJECT_DIR$/sokodudeblocking/sokodudeblocking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tyl_gifview/tyl_gifview.iml" filepath="$PROJECT_DIR$/tyl_gifview/tyl_gifview.iml" />
     </modules>
   </component>
 </project>

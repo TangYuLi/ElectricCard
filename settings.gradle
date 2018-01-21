@@ -1,1 +1,1 @@
-include ':littleQ', ':sokodudeblocking'
+include ':littleQ', ':sokodudeblocking', ':tyl_gifview'

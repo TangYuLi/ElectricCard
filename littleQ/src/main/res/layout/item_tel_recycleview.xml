@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/y50"
+    android:orientation="horizontal"
+    android:paddingBottom="@dimen/y5">
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@android:color/transparent"
+        android:gravity="center_vertical"
+        android:text="Tel"
+        android:textSize="@dimen/x15"
+        android:paddingLeft="10dp"
+        android:id="@+id/tv_item_tel"/>
+    <ImageButton
+        android:layout_width="@dimen/y50"
+        android:layout_height="match_parent"
+        android:src="@mipmap/ic_launcher"
+        android:background="@drawable/bg_circle_imageview"
+        android:padding="@dimen/y10"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/x15"
+        android:id="@+id/imageBtn_item_headpic" />
+    <ImageButton
+        android:layout_width="@dimen/x30"
+        android:layout_height="@dimen/x30"
+        android:background="@mipmap/tel_del"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="@dimen/x10"
+        android:id="@+id/imageBtn_item_tel_del" />
+</LinearLayout>
