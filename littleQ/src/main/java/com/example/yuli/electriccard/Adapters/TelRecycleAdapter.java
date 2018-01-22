@@ -3,6 +3,7 @@ package com.example.yuli.electriccard.Adapters;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.os.Message;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,11 +11,13 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
+import com.example.yuli.electriccard.Activity.LoginActivity;
 import com.example.yuli.electriccard.Beans.User;
 import com.example.yuli.electriccard.DataSource.LittleQDBOpenHelper;
 import com.example.yuli.electriccard.R;
 
 import java.util.ArrayList;
+import java.util.logging.Handler;
 
 /**
  * Created by YULI on 2018/1/21.
@@ -54,6 +57,15 @@ public class TelRecycleAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
         currentIndex = i;
 
         ((UserViewHolder)viewHolder).tv_tel.setText(tel);
+        ((UserViewHolder)viewHolder).tv_tel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Message msg = Message.obtain();
+                msg.what = 1;
+                msg.obj = ""+userList.get(currentIndex).getTel();
+                LoginActivity.LoginActivityHandler.instance.sendMessage(msg);
+            }
+        });
         ((UserViewHolder)viewHolder).ib_del.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

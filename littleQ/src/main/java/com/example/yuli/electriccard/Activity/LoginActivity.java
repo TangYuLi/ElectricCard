@@ -1,6 +1,7 @@
 package com.example.yuli.electriccard.Activity;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -32,6 +33,7 @@ import java.util.ArrayList;
 
 public class LoginActivity extends Activity{
 
+    private static Context context;
     public static LoginActivity instance;
 
     public EditText et_tel;
@@ -59,6 +61,7 @@ public class LoginActivity extends Activity{
     public static class LoginActivityHandler extends Handler{
 
         private final int SQLDB_INSERT_EXCEPTION = 0;
+        private final int TEL_ITEM_CLICK = 1;
 
         //单例模式
         public static LoginActivityHandler instance = new LoginActivityHandler();
@@ -76,6 +79,15 @@ public class LoginActivity extends Activity{
                 case SQLDB_INSERT_EXCEPTION:
                     String insertException = ""+msg.obj;
                     Toast.makeText(LoginActivity.instance,"该手机号码已注册",Toast.LENGTH_SHORT).show();
+                    break;
+                case TEL_ITEM_CLICK:
+                    String tel = ""+msg.obj;
+                    ((LoginActivity)context).et_tel.setText(tel);
+                    //视觉效果相当于折叠起telList
+                    ((LoginActivity)context).imageBtn_tel_fold_unfold.performClick();
+                    break;
+                default:
+                    break;
             }
         }
     }
@@ -88,6 +100,7 @@ public class LoginActivity extends Activity{
     }
 
     public void init() {
+        context = LoginActivity.this;
         et_tel = (EditText)findViewById(R.id.et_tel);
         et_password = (EditText)findViewById(R.id.et_password);
         imageBtn_tel_del = (ImageButton)findViewById(R.id.imageBtn_tel_del);
